@@ -58,7 +58,6 @@ pylint==2.5.3
 pyOpenSSL==19.1.0
 pyparsing==2.4.7
 pyperclip==1.8.2
-pypiwin32==221
 PyQt5==5.15.2
 PyQt5-sip==12.8.1
 PyQtWebEngine==5.15.2
