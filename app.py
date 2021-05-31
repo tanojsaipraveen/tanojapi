@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api,Resource
 import requests
+import os
 from flask_cors import CORS,cross_origin
 
 app = Flask(__name__)
@@ -32,4 +33,7 @@ api.add_resource(TrendingSongs,"/trendingsongs/")
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
     app.run(debug=True)
+    
