@@ -64,7 +64,6 @@ PyQtWebEngine==5.15.2
 python-dateutil==2.8.1
 pytube==10.4.1
 pytz==2020.1
-pywin32==228
 requests==2.24.0
 ruamel.yaml==0.16.13
 ruamel.yaml.clib==0.2.2
