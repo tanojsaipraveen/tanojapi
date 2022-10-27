@@ -14,6 +14,11 @@ class HelloWorld(Resource):
     def get(self,name):
         response = requests.get("https://www.jiosaavn.com/api.php?p=1&q="+name+"&_format=json&_marker=0&api_version=4&ctx=web6dot0&n=20&__call=search.getAlbumResults")
         return response.json()
+    
+class GetMovieData(Resource):
+    def get(self,name):
+        response = requests.get("https://seapi.link/?type=search&query="+name+"&max_results=max_results")
+        return response.json()
 
 class SongDetails(Resource):
     def get(self,id):
@@ -29,6 +34,8 @@ class TrendingSongs(Resource):
 
 
 api.add_resource(HelloWorld,"/helloworld/<string:name>")
+
+api.add_resource(GetMovieData,"/getmoviedata/<string:name>")
 
 api.add_resource(SongDetails,"/songdetails/<string:id>")
 
