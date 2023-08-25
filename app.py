@@ -16,7 +16,7 @@ class HelloWorld(Resource):
         return response.json()
 
 class AppVersion(Resource):
-    def get(self,name):
+    def get(self):
         return "1.0.0"
     
 class GetMovieData(Resource):
@@ -38,6 +38,8 @@ class TrendingSongs(Resource):
 
 
 api.add_resource(HelloWorld,"/helloworld/<string:name>")
+
+api.add_resource(AppVersion,"/AppVersion/")
 
 api.add_resource(GetMovieData,"/getmoviedata/<string:name>")
 
