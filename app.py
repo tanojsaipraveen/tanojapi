@@ -31,6 +31,10 @@ class TrendingSongs(Resource):
     def get(self):
         response = requests.get("https://www.jiosaavn.com/api.php?__call=webapi.getLaunchData&api_version=4&_format=json&_marker=0&ctx=wap6dot0",headers={"accept-language":"en-US,en;q=0.9,te-IN;q=0.8,te;q=0.7"})
         return response.json()
+
+class AppVersion(Resource):
+    def get(self):
+        return "1.0.0"
     
 
 
@@ -44,6 +48,8 @@ api.add_resource(GetMovieData,"/getmoviedata/<string:name>")
 api.add_resource(SongDetails,"/songdetails/<string:id>")
 
 api.add_resource(TrendingSongs,"/trendingsongs/")
+
+api.add_resource(AppVersion,"/AppVersion/")
 
 
 if __name__ == "__main__":
